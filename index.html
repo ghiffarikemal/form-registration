@@ -1,0 +1,50 @@
+<div class="container">
+
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+        <script src="sweetalert2.all.min.js"></script>
+        <script src="script.js"></script>
+    </head>
+
+    <form id="contact" action="" method="post" >
+        <h3>Form Registration</h3>
+        <fieldset>
+            <input placeholder="Your Full Name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+        <fieldset>
+            <p>Please select your gender:</p>
+            <input type="radio" id="male" name="gender" value="male" required>
+            <label for="male">Male</label><br>
+            <input type="radio" id="female" name="gender" value="female" required>
+            <label for="female">Female</label><br>
+        </fieldset>
+        <fieldset onkeypress="return handleData()">
+            <p>Please select your Hobby:</p>
+            <input type="checkbox" name="langs[]" required>
+            <label for="langs_tv"> Watching TV</label><br>
+            <input type="checkbox" name="langs[]" required>
+            <label for="langs_reading"> Reading</label><br>
+            <input type="checkbox" name="langs[]" required> 
+            <label for="langs_eating"> Eating</label>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Your Email Address" type="email" tabindex="2" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Your Phone Number (optional)" type="tel" maxlength="12" onkeypress="return isNumberKey(event)" tabindex="3" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Username" type="text" maxlength="10" required>
+        </fieldset>
+        <fieldset>
+            <input placeholder="Password" type="password"  minlength="7" required>
+        </fieldset>
+        <fieldset class="row">
+            <div class="column">
+            <button name="Reset" type="reset" id="contact-submit">Reset</button>
+            <button name="submit" type="submit" id="contact-submit" data-submit="...Sending">Submit</button>
+        </div>
+        </fieldset>
+    </form>
+</div>
